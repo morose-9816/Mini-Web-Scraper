@@ -2,9 +2,11 @@ A modular mini web scraper which can scrape data off any website which only
 has static pages into a structured JSON output based on an input configuration.
 
 What is the input and output for the scraping module?
+
 Two files as an input:
 - scraper-config.json contains the real Configuration for a website
 - urls.csv which contains 100 candidate URL’s present in that website.
+
 Output:
 - Return the data into one JSON object for all the 100 candidate URLs using the Entity
 notation.
