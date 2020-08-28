@@ -1,0 +1,9 @@
+Python 3.7.0
+beautifulsoup4==4.6.3
+jsonschema==2.6.0
+lxml==4.2.5
+urllib3==1.23
+virtualenv==20.0.21
+ipykernel==4.10.0
+ipython==6.5.0
+ipython-genutils==0.2.0

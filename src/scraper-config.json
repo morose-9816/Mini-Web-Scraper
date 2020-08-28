@@ -1,0 +1,70 @@
+﻿{
+  "config": "",
+  "is_multiple": false,
+  "entity": "product_details",
+  "entity_type": "entity",
+  "entity_scrapers": [
+    {
+      "config": "h1[class*='title']::text",
+      "is_multiple": false,
+      "entity": "product_name",
+      "entity_type": "string"
+    },
+    {
+      "config": "img.img_delete_bg_noshow::attr(src)",
+      "is_multiple": true,
+      "entity": "images",
+      "entity_type": "string"
+    },
+    {
+      "config": "#breadcrumbs a:nth-of-type(2)::text",
+      "is_multiple": false,
+      "entity": "product_type",
+      "entity_type": "string"
+    },
+    {
+      "config": ".seal_paragraph::text",
+      "is_multiple": true,
+      "entity": "claims",
+      "entity_type": "string"
+    },
+    {
+      "config": "#breadcrumbs > a:nth-of-type(2)::text",
+      "is_multiple": false,
+      "entity": "aisle",
+      "entity_type": "string"
+    },
+    {
+      "config": "#breadcrumbs > a:nth-of-type(3)::text",
+      "is_multiple": false,
+      "entity": "shelf",
+      "entity_type": "string"
+    },
+    {
+      "config": "",
+      "is_multiple": false,
+      "entity": "product_dimension",
+      "entity_type": "entity",
+      "entity_scrapers": [
+        {
+          "config": "option[selected]::text",
+          "is_multiple": false,
+          "entity": "package_size",
+          "entity_type": "string"
+        },
+        {
+          "config": ".performance-servings::text",
+          "is_multiple": false,
+          "entity": "servings_per_container",
+          "entity_type": "string"
+        },
+        {
+          "config": ".serving_size_title select + span::text",
+          "is_multiple": false,
+          "entity": "weight_per_serving",
+          "entity_type": "string"
+        }
+      ]
+    }
+  ]
+}
