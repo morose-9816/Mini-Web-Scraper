@@ -1,6 +1,15 @@
 A modular mini web scraper which can scrape data off any website which only
 has static pages into a structured JSON output based on an input configuration.
 
+What is the input and output for the scraping module?
+Two files as an input:
+- scraper-config.json contains the real Configuration for a website
+- urls.csv which contains 100 candidate URL’s present in that website.
+Output:
+- Return the data into one JSON object for all the 100 candidate URLs using the Entity
+notation.
+
+
 Assumptions :
 	- The input config file has all the tags/classes/id which are needed to be scraped
 	- The config of every entity in input_config.json has either ::attr(src) or ::text in the end.
@@ -17,4 +26,3 @@ Drawbacks :
 	- BeautifulSoup has slower processing. Can use scrapy for complex projects 
 
 Please see installation.txt to download dependecies required to run this code.
-Output JSON will is named as output.json
